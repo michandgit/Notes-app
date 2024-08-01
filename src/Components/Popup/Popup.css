@@ -1,0 +1,129 @@
+.popup{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right:0;
+    left:0;
+    z-index: 1000;
+    display: flex;
+ 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box{
+    height:210px;
+    width:550px ;
+    gap:20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 60px ;
+    padding: 20px;
+    border : 2px solid rgb(18, 18, 18);
+    border-radius: 5px;
+}
+
+.box h2{
+    font-weight: 500;
+    font-size:28px;
+
+}
+
+.data1{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:90%;
+    height:60px;
+}
+
+.data2{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:90%;
+    height:60px;
+}
+label{
+    font-weight: 500;
+    font-size: 25px;
+
+}
+input{
+    border:2px solid #CCCCCC;
+    border-radius:22px;
+    width:330px;
+    height:40px;
+    padding: 5px;
+    font-size: 20px;
+    
+}
+.btns{
+    display: flex;
+    width:100%;
+   height:10%;
+    gap:20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+button{
+    background: #001F8B;
+    padding:5px;
+    color:white;
+    cursor:pointer;
+    width:104px;
+    height:29px;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    
+ 
+}
+
+.clr6{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background: #6691FF;
+    cursor: pointer;
+}
+.clr5{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background: #0047FF;
+    cursor: pointer;
+}
+.clr4{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background:#F19576;
+    cursor: pointer;
+}
+.clr3{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background:#43E6FC;
+    cursor: pointer;
+}
+.clr2{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background:#FF79F2;
+    cursor: pointer;
+}
+.clr1{
+    height:30px;
+    width:30px ;
+    border-radius: 50%;
+    background:#B38BFA;
+    cursor: pointer;
+}

@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Sidebar from './Components/Sidebar/Sidebar'
+import ContentSection from './Components/ContentSection/ContentSection'
 
 function App() {
+  const [groups, setGroups] = useState([]);
+  const [selectedGroup, setSelectedGroup] = useState(null);
+  const [notes, setNotes] = useState({});
+
+  const addGroup = (group) => {
+    setGroups([...groups, group]);
+    setNotes({
+      ...notes,
+      [group.title]: []
+    });
+  };
+
+  const addNote = (note) => {
+    setNotes({
+      ...notes,
+      [selectedGroup]: [...notes[selectedGroup], note]
+    });
+  };
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar 
+        groups={groups} 
+        addGroup={addGroup} 
+        selectGroup={setSelectedGroup}
+      />
+     <ContentSection
+      notes={selectedGroup ? notes[selectedGroup] : []} 
+        addNote={addNote}
+        selectedGroup={selectedGroup}
+     />
     </div>
   );
 }
